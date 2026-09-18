@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сайты памяти</title>
+<style>
+:root{
+  --bg:#14161a; --panel:#1c2025; --ink:#e9e5dc; --soft:#8d887e;
+  --line:#282c32; --accent:#c8973c;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);
+  font-size:17px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1080px,100% - 48px);margin-inline:auto}
+.micro{font-family:var(--sans);font-size:11.5px;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--soft)}
+
+header{padding:84px 0 44px;border-bottom:1px solid var(--line)}
+h1{font-family:var(--serif);font-weight:400;margin:14px 0 0;
+  font-size:clamp(34px,5.4vw,58px);line-height:1.05;letter-spacing:-.015em}
+header p{color:var(--soft);margin:18px 0 0;max-width:44em}
+
+.list{display:grid;gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+.card{display:grid;grid-template-columns:64px 1fr auto;gap:26px;align-items:center;
+  background:var(--bg);padding:30px 4px;transition:background .25s}
+.card:hover{background:var(--panel)}
+.card .n{font-family:var(--sans);font-size:12px;letter-spacing:.16em;color:var(--accent)}
+.card h2{margin:0;font-family:var(--serif);font-weight:400;font-size:clamp(21px,2.6vw,27px)}
+.card p{margin:5px 0 0;color:var(--soft);font-size:16px;max-width:52em}
+.card .go{font-family:var(--sans);font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--soft);white-space:nowrap}
+.card:hover .go{color:var(--accent)}
+.card .tag{display:inline-block;font-family:var(--sans);font-size:10.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:#151312;background:var(--accent);
+  padding:3px 8px;margin-left:10px;vertical-align:2px}
+@media(max-width:700px){
+  .card{grid-template-columns:1fr;gap:6px;padding:24px 4px}
+  .card .go{display:none}
+}
+
+footer{padding:40px 0 70px;color:var(--soft);font-size:15px}
+footer code{font-family:ui-monospace,Consolas,monospace;font-size:14px;
+  background:var(--panel);padding:2px 6px;border-radius:3px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="micro">Домашний архив</p>
+    <h1>Сайты памяти</h1>
+    <p>Пять готовых страниц. Каждая — один файл <code>index.html</code>: внутри и данные,
+       и оформление. Тексты и подписи правятся прямо в браузере кнопкой «Редактировать».</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="list">
+
+    <a class="card" href="site-5-war/index.html">
+      <span class="n">05</span>
+      <div>
+        <h2>«Фронт» — военный шаблон<span class="tag">заполнен</span></h2>
+        <p>Демо-данные вымышленного ветерана. Свои разделы: боевой путь на карте,
+           награды и документы с подробным описанием.</p>
+      </div>
+      <span class="go">Открыть →</span>
+    </a>
+
+    <a class="card" href="site-1-warm/index.html">
+      <span class="n">01</span>
+      <div>
+        <h2>«Свет» — тёплый шаблон</h2>
+        <p>Светлая архивная тема: кремовая бумага, портрет в паспарту, буквица в биографии.</p>
+      </div>
+      <span class="go">Открыть →</span>
+    </a>
+
+    <a class="card" href="site-2-noir/index.html">
+      <span class="n">02</span>
+      <div>
+        <h2>«Ночь» — тёмный шаблон</h2>
+        <p>Кинематографичная тема: обложка на весь экран, фотолента, крупные цитаты.</p>
+      </div>
+      <span class="go">Открыть →</span>
+    </a>
+
+    <a class="card" href="site-3-paper/index.html">
+      <span class="n">03</span>
+      <div>
+        <h2>«Бумага» — строгий шаблон</h2>
+        <p>Типографика: белый лист, крупный титул, чёрно-белые снимки, ассиметричная сетка.</p>
+      </div>
+      <span class="go">Открыть →</span>
+    </a>
+
+    <a class="card" href="site-4-all/index.html">
+      <span class="n">04</span>
+      <div>
+        <h2>Все три темы в одном файле</h2>
+        <p>Переключатель в шапке: «Свет», «Ночь», «Бумага». Выбор запоминается.</p>
+      </div>
+      <span class="go">Открыть →</span>
+    </a>
+
+  </div>
+</main>
+
+<footer class="wrap">
+  Как всё устроено и что где менять — в файле <code>README.md</code>.<br>
+  Видео к пятому сайту в репозиторий не залито: файл весит 92 МБ.
+  Он лежит на диске в <code>site-5-war/media/</code> и работает при открытии с компьютера.
+</footer>
+
+</body>
+</html>
